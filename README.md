@@ -1,5 +1,7 @@
 # Live Music Recognition iOS App
 
+The project consists of a debug and a release target. The debug target has its own bundle as the release target. Debug ends with ‘*.debug’.
+
 Quick install
 
 1. Clone the repo:
