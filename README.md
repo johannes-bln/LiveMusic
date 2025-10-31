@@ -44,3 +44,8 @@ open LiveMusic.xcodeproj
 
 Enjoy! — Quick and simple.
 
+
+
+Important things 
+
+instead of "print" use "debugPrint()"

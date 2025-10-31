@@ -43,21 +43,21 @@ final class PermissionViewModel: ObservableObject {
         do {
             let granted = try await center.requestAuthorization(options: options)
             if granted {
-                print("Notifications permission granted.")
+                debugPrint("Notifications permission granted.")
             } else {
-                print("Notifications permission denied.")
+                debugPrint("Notifications permission denied.")
             }
         } catch {
-            print("Error requesting notifications permission: \(error)")
+            debugPrint("Error requesting notifications permission: \(error)")
         }
     }
 
     // MARK: - Request Live Activity Permission
     func requestLiveActivityPermission() async {
         if ActivityAuthorizationInfo().areActivitiesEnabled {
-            print("Live Activities are enabled.")
+            debugPrint("Live Activities are enabled.")
         } else {
-            print("Live Activities are not enabled.")
+            debugPrint("Live Activities are not enabled.")
         }
     }
 
@@ -73,10 +73,10 @@ final class PermissionViewModel: ObservableObject {
         allowsNotifications = notiStatus.authorizationStatus == .authorized
 
         if ActivityAuthorizationInfo().areActivitiesEnabled {
-            print("Live Activities are enabled.")
+            debugPrint("Live Activities are enabled.")
             allowsLiveActivities = true
         } else {
-            print("Live Activities are not enabled.")
+            debugPrint("Live Activities are not enabled.")
             allowsLiveActivities = false
         }
     }

@@ -1,1 +1,6 @@
-#comming later
+custom_rules:
+  no_print:
+    name: "Avoid print()"
+    regex: "print\\s*\\("
+    message: "Use debugPrint() instead of print() to avoid print statements during runtime in the release version."
+    severity: warning
