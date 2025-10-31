@@ -12,6 +12,5 @@ import Combine
 class PermissionViewModel: ObservableObject {
     @Published var allowsMicrophoneAccess: Bool = false
     @Published var allowsAppleMusicAccess: Bool = false
-    
     // Add methods to request permissions
 }
