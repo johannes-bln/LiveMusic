@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeViewDebug: View {
     @EnvironmentObject var permissionViewModel: PermissionViewModel
+    @State private var showNormalView = false
 
     var body: some View {
         VStack {
@@ -53,20 +54,24 @@ struct HomeViewDebug: View {
                 }
             }
 
-            Button("location permission") {
+            Button("1. location permission") {
                 Task {
-                     permissionViewModel.requestLocationAccessWhenInUse()
+                    permissionViewModel.requestLocationAccessWhenInUse()
                 }
             }
 
-            Button("location permission always") {
+            Button("2. location permission always (request first the normal location!!!)") {
                 Task {
-                     permissionViewModel.requestLocationAccessAlways()
+                    permissionViewModel.requestLocationAccessAlways()
                 }
             }
 
             Button("App Settings iOS") {
                 permissionViewModel.navigateToSettings()
+            }
+
+            Button("Launch **LiveMusic**") {
+                showNormalView = true
             }
 
             AlbumView(musicItem: exampleShazamMusicItem)
@@ -75,6 +80,9 @@ struct HomeViewDebug: View {
 
         }
         .padding()
+        .fullScreenCover(isPresented: $showNormalView) {
+            HomeView()
+        }
     }
 }
 

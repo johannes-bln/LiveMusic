@@ -68,3 +68,14 @@ Swift Lint shows you code formatting errors directly, as in this example. We hav
 
 <img width="1881" height="152" alt="image" src="https://github.com/user-attachments/assets/b4b5a57a-870e-41c9-b88e-53562d3d8fa6" />
 *Pro tip: Press Control + Shift + I to format the code. 🙂*
+
+
+## How it works? - Creating 2 Bundle with different App Namens (for Debug and Release) and Using them by the Scheme is quite simple
+
+1. Add "CFBundleDisplayName" with is the "Bundle display name" and add as String "$(APP_DISPLAY_NAME)" 
+
+2. Add a User defined Build Setting 
+
+3. Name it "APP_DISPLAY_NAME"
+
+4. Now you can Add a Name for the Debug and a Name for the Release
