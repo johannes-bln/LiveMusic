@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DebugContentView: View {
     @EnvironmentObject var permissionViewModel: PermissionViewModel
 
     var body: some View {
         VStack {
-            Text("Welcome to LiveMusic!")
+            Text("Welcome to LiveMusic DEBUG!")
                 .font(.largeTitle)
                 .padding()
 
@@ -53,6 +53,18 @@ struct ContentView: View {
                 }
             }
 
+            Button("location permission") {
+                Task {
+                     permissionViewModel.requestLocationAccessWhenInUse()
+                }
+            }
+
+            Button("location permission always") {
+                Task {
+                     permissionViewModel.requestLocationAccessAlways()
+                }
+            }
+
             Button("App Settings iOS") {
                 permissionViewModel.navigateToSettings()
             }
@@ -68,6 +80,6 @@ struct ContentView: View {
 
 #Preview {
     @Previewable @StateObject var permissionViewModel = PermissionViewModel()
-    ContentView()
+    DebugContentView()
         .environmentObject(permissionViewModel)
 }
