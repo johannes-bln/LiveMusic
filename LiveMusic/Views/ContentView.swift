@@ -16,13 +16,25 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .padding()
 
-            Text(permissionViewModel.allowsMicrophoneAccess ? "Mic Granted" : "Mic Not Granted")
+            Text(
+                permissionViewModel.allowsMicrophoneAccess
+                    ? "Mic Granted" : "Mic Not Granted"
+            )
 
-            Text(permissionViewModel.allowsAppleMusicAccess ? "Apple Music Granted" : "Apple Music Not Granted")
+            Text(
+                permissionViewModel.allowsAppleMusicAccess
+                    ? "Apple Music Granted" : "Apple Music Not Granted"
+            )
 
-            Text(permissionViewModel.allowsNotifications ? "Notifications Granted" : "Notifications Not Granted")
+            Text(
+                permissionViewModel.allowsNotifications
+                    ? "Notifications Granted" : "Notifications Not Granted"
+            )
 
-            Text(permissionViewModel.allowsLiveActivities ? "Live Activities Granted" : "Live Activities Not Granted")
+            Text(
+                permissionViewModel.allowsLiveActivities
+                    ? "Live Activities Granted" : "Live Activities Not Granted"
+            )
 
             Button("apple music permission") {
                 Task {
@@ -44,6 +56,9 @@ struct ContentView: View {
             Button("App Settings iOS") {
                 permissionViewModel.navigateToSettings()
             }
+
+            AlbumView(musicItem: exampleShazamMusicItem)
+
             MusicInfoRow(musicItem: exampleShazamMusicItem)
 
         }
