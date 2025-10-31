@@ -7,3 +7,6 @@
 */
 "NSMicrophoneUsageDescription" = "LiveMusic needs microphone access to recognize songs.";
 "NSAppleMusicUsageDescription" = "LiveMusic needs access to your Apple Music library to identify, add and play songs.";
+"NSLocationWhenInUseUsageDescription" = "LiveMusic requires access to your location in order to save where the song was recognised and display it to you later.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "LiveMusic needs background location access to keep saving where songs were recognised, even when the app is not open.";
+"NSLocationAlwaysUsageDescription" = "LiveMusic requires access to your location in order to save where the song was recognised and display it to you later.";

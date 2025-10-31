@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var permissionViewModel: PermissionViewModel
+
     var body: some View {
         NavigationStack {
             Text("Home comes here later")
@@ -17,5 +19,7 @@ struct HomeView: View {
 }
 
 #Preview {
+    @Previewable @StateObject var permissionViewModel = PermissionViewModel()
     HomeView()
+        .environmentObject(permissionViewModel)
 }

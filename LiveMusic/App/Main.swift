@@ -13,8 +13,13 @@ struct Main: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            #if DEBUG
+            HomeViewDebug()
                 .environmentObject(permissionsViewModel)
+            #else
+            HomeView()
+                .environmentObject(permissionsViewModel)
+            #endif
         }
     }
 }

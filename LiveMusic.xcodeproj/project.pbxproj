@@ -293,6 +293,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LiveMusic/LiveMusic.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UWRMZX542W;
@@ -302,6 +303,9 @@
 				INFOPLIST_FILE = LiveMusic/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = music_usage_description;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = location_always_and_when_in_usage_description;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = location_always_desc;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = location_when_in_usage_description;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = microphone_usage_description;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
@@ -317,8 +321,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.johannes-bln.LiveMusic";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.johannes-bln.LiveMusic.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -344,6 +349,9 @@
 				INFOPLIST_FILE = LiveMusic/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = music_usage_description;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = location_always_and_when_in_usage_description;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = location_always_desc;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = location_when_in_usage_description;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = microphone_usage_description;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;

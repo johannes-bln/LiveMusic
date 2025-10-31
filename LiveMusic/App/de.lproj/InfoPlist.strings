@@ -7,3 +7,6 @@
 */
 "NSMicrophoneUsageDescription" = "LiveMusic benötigt Zugriff auf dein Mikrofon, um Songs zu erkennen.";
 "NSAppleMusicUsageDescription" = "LiveMusic benötigt Zugriff auf deine Musikmediathek, um Songs zu erkennen, hinzuzufügen und abzuspielen.";
+"NSLocationWhenInUseUsageDescription” = „LiveMusic benötigt Zugriff auf Ihren Standort, um zu speichern, wo der Song erkannt wurde, und Ihnen dies später anzuzeigen.";
+"NSLocationAlwaysAndWhenInUseUsageDescription” = „LiveMusic benötigt Hintergrundzugriff auf Ihren Standort, um weiterhin zu speichern, wo Songs erkannt wurden, auch wenn die App nicht geöffnet ist.";
+"NSLocationAlwaysUsageDescription” = „LiveMusic benötigt Zugriff auf Ihren Standort, um zu speichern, wo der Song erkannt wurde, und Ihnen dies später anzuzeigen.";

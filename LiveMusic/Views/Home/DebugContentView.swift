@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeViewDebug.swift
 //  LiveMusic
 //
 //  Created by Johannes Glückler on 30.10.25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DebugContentView: View {
+struct HomeViewDebug: View {
     @EnvironmentObject var permissionViewModel: PermissionViewModel
 
     var body: some View {
@@ -80,6 +80,6 @@ struct DebugContentView: View {
 
 #Preview {
     @Previewable @StateObject var permissionViewModel = PermissionViewModel()
-    DebugContentView()
+    HomeViewDebug()
         .environmentObject(permissionViewModel)
 }

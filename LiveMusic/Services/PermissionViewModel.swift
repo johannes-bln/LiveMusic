@@ -7,6 +7,7 @@
 
 import AVFoundation
 import UserNotifications
+import CoreLocation
 import ActivityKit
 import MusicKit
 import Combine
@@ -18,6 +19,8 @@ final class PermissionViewModel: ObservableObject {
     @Published var allowsAppleMusicAccess = false
     @Published var allowsNotifications = false
     @Published var allowsLiveActivities = false
+    @Published var allowsLocationAccessWhenInUse = false
+    @Published var allowsLocationAccessAlways = false
 
     init() {
         Task { await refreshPermissions() }
@@ -59,6 +62,18 @@ final class PermissionViewModel: ObservableObject {
         } else {
             debugPrint("Live Activities are not enabled.")
         }
+    }
+
+    // MARK: - Request Location Access
+    func requestLocationAccessWhenInUse() {
+        let locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+    }
+
+    // MARK: - Request Location Access Always
+    func requestLocationAccessAlways() {
+        let locationManager = CLLocationManager()
+        locationManager.requestAlwaysAuthorization()
     }
 
     // MARK: - Refresh Permissions
