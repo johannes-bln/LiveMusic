@@ -48,10 +48,8 @@ Enjoy! — Quick and simple.
 It's really important. Here's a small example:
 There's a song title and a song artist. Someone might not know what the title is and who the artist is, so VoiceOver MUST say this out loud. We do this by specifying it explicitly and also localising it.
 
-
-
-
 ## SwiftLint
 Swift Lint shows you code formatting errors directly, as in this example. We have debugPrint because it automatically checks whether it is running in debug or release mode. Please note these warnings for clean code. THANK YOU! :)
 
 <img width="1881" height="152" alt="image" src="https://github.com/user-attachments/assets/b4b5a57a-870e-41c9-b88e-53562d3d8fa6" />
+*Pro tip: Press Control + Shift + I to format the code. 🙂*
