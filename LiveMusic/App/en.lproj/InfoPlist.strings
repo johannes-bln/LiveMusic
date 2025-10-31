@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  LiveMusic
+
+  Created by Johannes Glückler on 31.10.25.
+  
+*/
+"NSMicrophoneUsageDescription" = "LiveMusic needs microphone access to recognize songs.";
+"NSAppleMusicUsageDescription" = "LiveMusic needs access to your Apple Music library to identify, add and play songs.";

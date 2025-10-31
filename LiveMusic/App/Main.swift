@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Main: App {
+    @StateObject var permissionsViewModel = PermissionViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(permissionsViewModel)
         }
     }
 }
