@@ -11,16 +11,16 @@ struct MusicInfoRow: View {
     let musicItem: ShazamMusicItem
     var body: some View {
         VStack {
-            Text(musicItem.title ?? String(localized: "placeholder.title", defaultValue: "Title"))
+            Text(musicItem.title ?? String(localized: "MusicInfoRow - Title", defaultValue: "Title"))
                 .accessibilityLabel(
-                    "\(String(localized: "static.title.accessibility", defaultValue: "Title")): \(musicItem.title ?? String(localized: "placeholder.title.accessibility", defaultValue: "unknown"))"
-                )
+                    "\(String(localized: "MusicInfoRow - Title", defaultValue: "Title")): \(musicItem.title ?? String(localized: "MusicInfoRow - unknown", defaultValue: "unknown"))"
+                ) // Title: Some Title ?? unknown
                 .fontType(.title)
 
-            Text(musicItem.artist ?? String(localized: "placeholder.artist", defaultValue: "Artist"))
+            Text(musicItem.artist ?? String(localized: "MusicInfoRow - Artist", defaultValue: "Artist"))
                 .accessibilityLabel(
-                    "\(String(localized: "static.artist.accessibility", defaultValue: "Artist")): \(musicItem.artist ?? String(localized: "placeholder.artist.accessibility", defaultValue: "unknown"))"
-                )
+                    "\(String(localized: "MusicInfoRow - Artist", defaultValue: "Artist")): \(musicItem.artist ?? String(localized: "MusicInfoRow - unknown", defaultValue: "unknown"))"
+                ) // Title: Some Artist ?? unknown
                 .fontType(.artist)
         }
     }

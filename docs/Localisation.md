@@ -10,3 +10,13 @@ The format is quite simple – in both German and English, Xcode will show you I
 ‘PERMISSION STRING’ = ‘Text of the permission request.’;
 
 It is important that the strings clearly describe what is being requested in order to comply with Apple's HIG.
+
+## General Locales
+For general localisation, I use the Localizable.xcstrings catalogue.
+
+Here we also have the English and German localisations.
+
+# Principals
+The structure is kept very simple:
+
+‘ViewName - Exact String’ (this makes it easier to maintain and understand)
