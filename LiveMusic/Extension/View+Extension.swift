@@ -6,3 +6,9 @@
 //
 
 import SwiftUI
+
+extension View {
+    func fontType(_ fontType: FontType) -> some View {
+        modifier(FontDefinitionModifier(fontType: fontType))
+    }
+}

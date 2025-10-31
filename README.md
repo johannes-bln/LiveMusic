@@ -44,6 +44,11 @@ open LiveMusic.xcodeproj
 
 Enjoy! — Quick and simple.
 
+## a11y - Accessibility:
+It's really important. Here's a small example:
+There's a song title and a song artist. Someone might not know what the title is and who the artist is, so VoiceOver MUST say this out loud. We do this by specifying it explicitly and also localising it.
+
+
 
 
 ## SwiftLint

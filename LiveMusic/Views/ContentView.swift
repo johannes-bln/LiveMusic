@@ -44,6 +44,7 @@ struct ContentView: View {
             Button("App Settings iOS") {
                 permissionViewModel.navigateToSettings()
             }
+            MusicInfoRow(musicItem: exampleShazamMusicItem)
 
         }
         .padding()
@@ -51,5 +52,7 @@ struct ContentView: View {
 }
 
 #Preview {
+    @Previewable @StateObject var permissionViewModel = PermissionViewModel()
     ContentView()
+        .environmentObject(permissionViewModel)
 }

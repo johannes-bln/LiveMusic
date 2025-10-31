@@ -1,5 +1,5 @@
 //
-//  RecognitionModel.swift
+//  ShazamMusicItem.swift
 //  LiveMusic
 //
 //  Created by Johannes Glückler on 30.10.25.
