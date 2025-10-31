@@ -46,6 +46,7 @@ Enjoy! — Quick and simple.
 
 
 
-Important things 
+## SwiftLint
+Swift Lint shows you code formatting errors directly, as in this example. We have debugPrint because it automatically checks whether it is running in debug or release mode. Please note these warnings for clean code. THANK YOU! :)
 
-instead of "print" use "debugPrint()"
+<img width="1881" height="152" alt="image" src="https://github.com/user-attachments/assets/b4b5a57a-870e-41c9-b88e-53562d3d8fa6" />
