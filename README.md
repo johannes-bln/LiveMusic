@@ -39,8 +39,21 @@ open LiveMusic.xcodeproj
 
 6. Select the Scheme "Debug"
 
+7. Change the Bundle Indetifier to your own identifier 
 
-7. Build & Run 🔨
+8. Go to [developer.apple.com/account ](https://developer.apple.com/account)
+
+8. Navigate to [indentifiers ](https://developer.apple.com/account/resources/identifiers/list) 
+
+9. Create a new identifier ("App IDs" -> "App") or select a existing for this project
+
+10. select "App Services" and checkmark "MusicKit" and "ShazamKit" 
+
+11. Hit Save and Confirm
+
+12. This sometimes takes up to 30 min, so if you encounter errors with the Frameworks (it should be normal in this time ^^)
+
+13. Finaly: Build & Run 🔨
 
 Enjoy! — Quick and simple.
 
