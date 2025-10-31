@@ -2,7 +2,11 @@
 
 The project consists of a debug and a release target. The debug target has its own bundle as the release target. Debug ends with ‘*.debug’.
 
-Quick install
+## Docs:
+Localisation: [/docs/Localisation.md](https://github.com/johannes-bln/LiveMusic/blob/main/docs/Localisation.md)
+
+
+## Quick install
 
 1. Clone the repo:
 
