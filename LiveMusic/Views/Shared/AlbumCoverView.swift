@@ -18,7 +18,7 @@ struct AlbumView: View {
             ) { phase in
                 switch phase {
                 case .empty:
-                    placeholder
+                    placeholder()
                 case .success(let image):
                     image
                         .resizable()
@@ -33,13 +33,10 @@ struct AlbumView: View {
         }
     }
 
-    private var placeholder: some View {
-        ZStack {
-            Color.secondary.opacity(0.1)
-            Image(systemName: "music.note")
-                .imageScale(.large)
-                .foregroundStyle(.secondary)
-        }
+    private func placeholder() -> some View {
+        ShimmerView()
+            .aspectRatio(1, contentMode: .fit)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 
     private var errorView: some View {

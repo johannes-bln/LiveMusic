@@ -11,6 +11,7 @@ import SwiftUI
 @main
 struct Main: App {
     @StateObject private var permissionsViewModel = PermissionViewModel()
+    @StateObject private var introViewModel = IntroViewModel()
     private let container: ModelContainer
 
     init() {
@@ -23,7 +24,7 @@ struct Main: App {
 
         let config = ModelConfiguration(
             "ShazamData",
-            cloudKitDatabase: .private(bundleID)
+            cloudKitDatabase: .private("iCloud.\(bundleID)")
         )
 
         debugPrint("Using iCloud Container ID: \(bundleID)")
@@ -41,13 +42,19 @@ struct Main: App {
 
     var body: some Scene {
         WindowGroup {
-            #if DEBUG
-                HomeViewDebug()
+            if introViewModel.hasIntroShown {
+#if DEBUG
+HomeViewDebug(context: container.mainContext)
+        .environmentObject(permissionsViewModel)
+#else
+    HomeView()
+        .environmentObject(permissionsViewModel)
+#endif
+            } else {
+                IntroView()
+                    .environmentObject(introViewModel)
                     .environmentObject(permissionsViewModel)
-            #else
-                HomeView()
-                    .environmentObject(permissionsViewModel)
-            #endif
+            }
         }
         .modelContainer(container)
     }
