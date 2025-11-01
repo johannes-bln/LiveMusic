@@ -10,10 +10,8 @@ import SwiftUI
 
 struct AlbumView: View {
     let musicItem: ShazamMusicItem
-    @ViewBuilder
     var body: some View {
-
-        if let imageURL = musicItem.appleMusicURL {
+        if let imageURL = musicItem.artworkURL {
             AsyncImage(
                 url: imageURL,
                 transaction: Transaction(animation: .easeInOut)

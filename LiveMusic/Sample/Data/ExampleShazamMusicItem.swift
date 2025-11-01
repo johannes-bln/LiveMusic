@@ -22,7 +22,6 @@ let exampleShazamMusicItem = ShazamMusicItem(
     appleMusicID: "1234567891",
     webURL: URL(string: "https://www.shazam.com/track/123456789/example-song"),
     shazamID: "123456789",
-    recognizedAt: Date(),
     recognizedAtLocationLatitude: 55.520008,
     recognizedAtLocationLongitude: 11.404954
 )
@@ -43,7 +42,6 @@ let demoExampleShazamMusicItems: [ShazamMusicItem] = [
         appleMusicID: "1234567892",
         webURL: URL(string: "https://www.shazam.com/track/123456790/example-song-live"),
         shazamID: "123456790",
-        recognizedAt: Date().addingTimeInterval(-3600),
         recognizedAtLocationLatitude: 52.515,
         recognizedAtLocationLongitude: 14.39
     ),
@@ -62,7 +60,6 @@ let demoExampleShazamMusicItems: [ShazamMusicItem] = [
         appleMusicID: "9876543211",
         webURL: URL(string: "https://www.shazam.com/track/987654321/chill-example-track"),
         shazamID: "987654321",
-        recognizedAt: Date().addingTimeInterval(-7200),
         recognizedAtLocationLatitude: 55.53,
         recognizedAtLocationLongitude: 9.41
     )

@@ -10,14 +10,17 @@ import SwiftData
 
 @Model
 class ShazamMusicItem: Identifiable {
-    @Attribute(.unique) var id: UUID
+    var id: UUID = UUID()
+
     var title: String?
     var subtitle: String?
     var artist: String?
     var artworkURL: URL?
     var videoURL: URL?
-    var genres: [String]
-    var explicitContent: Bool
+
+    var genres: [String] = []
+    var explicitContent: Bool = false
+
     var creationDate: Date?
     var isrc: String?
 
@@ -27,29 +30,30 @@ class ShazamMusicItem: Identifiable {
     var webURL: URL?
     var shazamID: String?
 
-    var recognizedAt: Date
+    var recognizedAt: Date = Date()
 
     var recognizedAtLocationLatitude: Double?
     var recognizedAtLocationLongitude: Double?
 
     init(
-        id: UUID,
+        id: UUID = UUID(),
         title: String? = nil,
         subtitle: String? = nil,
         artist: String? = nil,
         artworkURL: URL? = nil,
         videoURL: URL? = nil,
-        genres: [String],
-        explicitContent: Bool,
+        genres: [String] = [],
+        explicitContent: Bool = false,
         creationDate: Date? = nil,
         isrc: String? = nil,
         appleMusicURL: URL? = nil,
         appleMusicID: String? = nil,
         webURL: URL? = nil,
         shazamID: String? = nil,
-        recognizedAt: Date,
+        recognizedAt: Date = .now,
         recognizedAtLocationLatitude: Double? = nil,
-        recognizedAtLocationLongitude: Double? = nil) {
+        recognizedAtLocationLongitude: Double? = nil
+    ) {
         self.id = id
         self.title = title
         self.subtitle = subtitle
