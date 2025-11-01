@@ -1,6 +1,7 @@
 # Live Music Recognition iOS App
 
 The project consists of a debug and a release target. The debug target has its own bundle as the release target. Debug ends with ‘*.debug’.
+To test the project yourself, you will need a Paid Developer membership, as it uses some Apple services such as ‘ShazamKit’, ‘Cloud Kit’, etc.
 
 ## Docs:
 Localisation: [/docs/Localisation.md](https://github.com/johannes-bln/LiveMusic/blob/main/docs/Localisation.md)
@@ -61,7 +62,18 @@ open LiveMusic.xcodeproj
 
 13. This sometimes takes up to 30 min, so if you encounter errors with the Frameworks (it should be normal in this time ^^)
 
-14. Finaly: Build & Run 🔨
+14. Now go to ‘Signing & Capabilities’ and go to iCloud and create 2 new identifiers according to the following scheme:
+
+    1. Debug
+    iCloud.XXXYOUR_BUNDLEXXX.debug
+
+    2. Release
+    iCloud.XXXYOUR_BUNDLEXXX
+
+    Sometimes it will first be displayed in red, but just reload it.    
+    It has to be exactly according to this scheme, otherwise it won't work with the other code.
+
+15. Finaly: Build & Run 🔨
 
 Enjoy! — Quick and simple.
 
