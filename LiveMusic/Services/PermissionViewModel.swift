@@ -94,6 +94,19 @@ final class PermissionViewModel: ObservableObject {
             debugPrint("Live Activities are not enabled.")
             allowsLiveActivities = false
         }
+        let locStatus: CLAuthorizationStatus
+        locStatus = CLLocationManager().authorizationStatus
+        switch locStatus {
+        case .authorizedAlways:
+            allowsLocationAccessAlways = true
+            allowsLocationAccessWhenInUse = true
+        case .authorizedWhenInUse:
+            allowsLocationAccessWhenInUse = true
+            allowsLocationAccessAlways = false
+        default:
+            allowsLocationAccessWhenInUse = false
+            allowsLocationAccessAlways = false
+        }
     }
 
     // MARK: - Navigate to Settings
