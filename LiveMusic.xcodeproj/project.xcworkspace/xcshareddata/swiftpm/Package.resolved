@@ -1,0 +1,15 @@
+{
+  "originHash" : "92c5857d054cc4ae386098d2db4da6289cbc6989d33cf030aebbfea91c881aee",
+  "pins" : [
+    {
+      "identity" : "colorextension",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/johannes-bln/ColorExtension",
+      "state" : {
+        "revision" : "f129b644f03ec2c256665b2bbdbaa8b75e320814",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
