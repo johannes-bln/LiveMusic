@@ -64,10 +64,10 @@ open LiveMusic.xcodeproj
 
 14. Now go to ‘Signing & Capabilities’ and go to iCloud and create 2 new identifiers according to the following scheme:
 
-    1. Debug
+    1. Debug:
     iCloud.XXXYOUR_BUNDLEXXX.debug
 
-    2. Release
+    2. Release:
     iCloud.XXXYOUR_BUNDLEXXX
 
     Sometimes it will first be displayed in red, but just reload it.    
